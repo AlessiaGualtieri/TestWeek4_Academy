@@ -1,10 +1,11 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Week4.Academy.Test.Client.Contracts;
 using Week4.Academy.Test.Client.Methods;
+using Week4.Academy.Test.Core.Models;
 
 namespace Week4.Academy.Test.Client
 {
@@ -20,7 +21,7 @@ namespace Week4.Academy.Test.Client
 
             OrderMethods orderMethods = new OrderMethods(client);
 
-            OrderContract newOrder = new OrderContract
+            Order newOrder = new Order
             {
                 ID_Customer = 1,
                 Import = 7.34m,
@@ -29,16 +30,32 @@ namespace Week4.Academy.Test.Client
                 OrderDate = new DateTime(2021, 04, 23)
             };
 
-            //await orderMethods.PostOrderAsync(newOrder);
-            await orderMethods.GetByIDOrderAsync(1);
-            await orderMethods.FetchOrdersAsync();
+            await orderMethods.PostOrderAsync(newOrder);
+            //await orderMethods.GetByIDOrderAsync(1);
+            List<Order> orders = await orderMethods.FetchOrdersAsync();
+            foreach (var item in orders)
+            {
+                Console.WriteLine(item);
+            }
+            //await orderMethods.DeleteOrderAsync(1);
+            //await orderMethods.UpdateOrderAsync(2, newOrder);
 
             //Customer
             Console.Write("\nCustomer:\n");
+
             CustomerWCF.CustomerServiceClient customerClient = new CustomerWCF.CustomerServiceClient();
             customerClient.GetByIDCustomer(1);
-            customerClient.FetchCustomer();
-
+            Customer newCustomer = new Customer()
+            {
+                CustomerCode = "CC-0212",
+                FirstName = "Luca",
+                LastName = "Di Pietro"
+            };
+            customerClient.AddCustomer(newCustomer);
+            customerClient.DeleteByIdCustomer(2);
+            newCustomer.FirstName = "Stefano";
+            customerClient.UpdateCustomer(newCustomer);
+            List<Customer> customers = customerClient.FetchCustomer();
 
 
         }

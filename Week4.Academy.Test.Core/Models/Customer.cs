@@ -18,5 +18,11 @@ namespace Week4.Academy.Test.Core.Models
         public string LastName { get; set; }
 
         public IList<Order> Orders { get; set; }
+
+        public override string ToString()
+        {
+            return $"{ID_Customer} - {FirstName} {LastName}, " +
+                $"customer code: {CustomerCode}";
+        }
     }
 }

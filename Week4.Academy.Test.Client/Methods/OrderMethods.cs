@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Week4.Academy.Test.Client.Contracts;
+using Week4.Academy.Test.Core.Models;
 
 namespace Week4.Academy.Test.Client.Methods
 {
@@ -17,7 +17,7 @@ namespace Week4.Academy.Test.Client.Methods
             this.client = client;
         }
 
-        public async Task<bool> PostOrderAsync(OrderContract newOrder)
+        public async Task<bool> PostOrderAsync(Order newOrder)
         {
             HttpRequestMessage postRequest = new HttpRequestMessage()
             {
@@ -34,7 +34,7 @@ namespace Week4.Academy.Test.Client.Methods
             if (postResponse.StatusCode == System.Net.HttpStatusCode.Created)
             {
                 string data = await postResponse.Content.ReadAsStringAsync();
-                var result = JsonConvert.DeserializeObject<OrderContract>(data);
+                var result = JsonConvert.DeserializeObject<Order>(data);
 
                 Console.WriteLine($"Order added with id = {result.ID_Order}");
                 return true;
@@ -42,7 +42,7 @@ namespace Week4.Academy.Test.Client.Methods
             return false;
         }
 
-        public async Task<bool> FetchOrdersAsync()
+        public async Task<List<Order>> FetchOrdersAsync()
         {
             HttpRequestMessage postRequest = new HttpRequestMessage()
             {
@@ -55,23 +55,18 @@ namespace Week4.Academy.Test.Client.Methods
             if (postResponse.IsSuccessStatusCode)
             {
                 string data = await postResponse.Content.ReadAsStringAsync();
-                var result = JsonConvert.DeserializeObject<List<OrderContract>>(data);
+                var result = JsonConvert.DeserializeObject<List<Order>>(data);
 
-                if (result.Count == 0)
-                    Console.WriteLine("There are no orders");
-                else
-                    foreach (var item in result)
-                    {
-                        Console.WriteLine("\t" + data);
-                    }
-                return true;
+                return result;
             }
-            return false;
+            return null;
         }
-        public async Task<bool> GetByIDOrderAsync(int id)
+
+        public async Task<Order> GetByIDOrderAsync(int id)
         {
+            Order result = null;
             if (id <= 0)
-                return false;
+                return null;
 
             HttpRequestMessage postRequest = new HttpRequestMessage()
             {
@@ -84,15 +79,12 @@ namespace Week4.Academy.Test.Client.Methods
             if (postResponse.IsSuccessStatusCode)
             {
                 string data = await postResponse.Content.ReadAsStringAsync();
-                var result = JsonConvert.DeserializeObject<OrderContract>(data);
-
-                Console.WriteLine("Successfully added the following order:\n\t" + data);
-                return true;
+                result = JsonConvert.DeserializeObject<Order>(data);
             }
-            return false;
+            return result;
         }
 
-        public async Task<bool> UpdateOrderAsync(int id, OrderContract newOrder)
+        public async Task<bool> UpdateOrderAsync(int id, Order newOrder)
         {
             HttpRequestMessage putRequest = new HttpRequestMessage()
             {
@@ -109,7 +101,7 @@ namespace Week4.Academy.Test.Client.Methods
             if (putResponse.IsSuccessStatusCode)
             {
                 string data = await putResponse.Content.ReadAsStringAsync();
-                var result = JsonConvert.DeserializeObject<OrderContract>(data);
+                var result = JsonConvert.DeserializeObject<Order>(data);
 
                 Console.WriteLine("Successfully updated order");
                 return true;

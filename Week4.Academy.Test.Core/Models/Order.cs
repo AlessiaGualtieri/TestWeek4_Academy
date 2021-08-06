@@ -14,5 +14,11 @@ namespace Week4.Academy.Test.Core.Models
 
         public Customer Customer { get; set; }
         public int ID_Customer { get; set; }
+
+        public override string ToString()
+        {
+            return $"{ID_Order} - Order code: {OrderCode} - Product code: {ProductCode}" +
+                $" - Import: {Import} - ID Customer: {ID_Customer} - Date: {OrderDate}";
+        }
     }
 }
