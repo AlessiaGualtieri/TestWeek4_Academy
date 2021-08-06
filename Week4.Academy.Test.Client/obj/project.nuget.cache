@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "vgsRYe0Od9FCNcGfzcjkXNol9UKhQwF2XfpOA/hSwZJFlLiMYmD2/Kipem1jyxW8E2lBgUTYTnGueJtUh4uDag==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alessia.gualtieri\\source\\repos\\Week4.Academy.Test.Core\\Week4.Academy.Test.Client\\Week4.Academy.Test.Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alessia.gualtieri\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\alessia.gualtieri\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\alessia.gualtieri\\.nuget\\packages\\system.net.http.winhttphandler\\4.4.0\\system.net.http.winhttphandler.4.4.0.nupkg.sha512",
+    "C:\\Users\\alessia.gualtieri\\.nuget\\packages\\system.private.servicemodel\\4.4.4\\system.private.servicemodel.4.4.4.nupkg.sha512",
+    "C:\\Users\\alessia.gualtieri\\.nuget\\packages\\system.reflection.dispatchproxy\\4.4.0\\system.reflection.dispatchproxy.4.4.0.nupkg.sha512",
+    "C:\\Users\\alessia.gualtieri\\.nuget\\packages\\system.security.principal.windows\\4.4.0\\system.security.principal.windows.4.4.0.nupkg.sha512",
+    "C:\\Users\\alessia.gualtieri\\.nuget\\packages\\system.servicemodel.duplex\\4.4.4\\system.servicemodel.duplex.4.4.4.nupkg.sha512",
+    "C:\\Users\\alessia.gualtieri\\.nuget\\packages\\system.servicemodel.http\\4.4.4\\system.servicemodel.http.4.4.4.nupkg.sha512",
+    "C:\\Users\\alessia.gualtieri\\.nuget\\packages\\system.servicemodel.nettcp\\4.4.4\\system.servicemodel.nettcp.4.4.4.nupkg.sha512",
+    "C:\\Users\\alessia.gualtieri\\.nuget\\packages\\system.servicemodel.primitives\\4.4.4\\system.servicemodel.primitives.4.4.4.nupkg.sha512",
+    "C:\\Users\\alessia.gualtieri\\.nuget\\packages\\system.servicemodel.security\\4.4.4\\system.servicemodel.security.4.4.4.nupkg.sha512"
+  ],
+  "logs": []
+}

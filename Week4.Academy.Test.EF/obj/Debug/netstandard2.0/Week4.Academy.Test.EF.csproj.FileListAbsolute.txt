@@ -1,0 +1,12 @@
+C:\Users\alessia.gualtieri\source\repos\Week4.Academy.Test.Core\Week4.Academy.Test.EF\bin\Debug\netstandard2.0\Week4.Academy.Test.EF.deps.json
+C:\Users\alessia.gualtieri\source\repos\Week4.Academy.Test.Core\Week4.Academy.Test.EF\bin\Debug\netstandard2.0\Week4.Academy.Test.EF.dll
+C:\Users\alessia.gualtieri\source\repos\Week4.Academy.Test.Core\Week4.Academy.Test.EF\bin\Debug\netstandard2.0\Week4.Academy.Test.EF.pdb
+C:\Users\alessia.gualtieri\source\repos\Week4.Academy.Test.Core\Week4.Academy.Test.EF\bin\Debug\netstandard2.0\Week4.Academy.Test.Core.dll
+C:\Users\alessia.gualtieri\source\repos\Week4.Academy.Test.Core\Week4.Academy.Test.EF\bin\Debug\netstandard2.0\Week4.Academy.Test.Core.pdb
+C:\Users\alessia.gualtieri\source\repos\Week4.Academy.Test.Core\Week4.Academy.Test.EF\obj\Debug\netstandard2.0\Week4.Academy.Test.EF.csproj.AssemblyReference.cache
+C:\Users\alessia.gualtieri\source\repos\Week4.Academy.Test.Core\Week4.Academy.Test.EF\obj\Debug\netstandard2.0\Week4.Academy.Test.EF.AssemblyInfoInputs.cache
+C:\Users\alessia.gualtieri\source\repos\Week4.Academy.Test.Core\Week4.Academy.Test.EF\obj\Debug\netstandard2.0\Week4.Academy.Test.EF.AssemblyInfo.cs
+C:\Users\alessia.gualtieri\source\repos\Week4.Academy.Test.Core\Week4.Academy.Test.EF\obj\Debug\netstandard2.0\Week4.Academy.Test.EF.csproj.CoreCompileInputs.cache
+C:\Users\alessia.gualtieri\source\repos\Week4.Academy.Test.Core\Week4.Academy.Test.EF\obj\Debug\netstandard2.0\Week4.Academy.Test.EF.csproj.CopyComplete
+C:\Users\alessia.gualtieri\source\repos\Week4.Academy.Test.Core\Week4.Academy.Test.EF\obj\Debug\netstandard2.0\Week4.Academy.Test.EF.dll
+C:\Users\alessia.gualtieri\source\repos\Week4.Academy.Test.Core\Week4.Academy.Test.EF\obj\Debug\netstandard2.0\Week4.Academy.Test.EF.pdb
